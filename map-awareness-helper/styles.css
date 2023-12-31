@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: skyblue; /* Set background color to sky blue */
+}
+
+.container {
+    text-align: center;
+}
+
+#countdown {
+    font-size: 2em;
+    margin-top: 20px;
+        font-weight: bold; /* Make the numbers bold */
+}
+
+/* Set styles for the button */
+#toggleButton {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 10px;
+    width: 68px; /* Set the width to match the image width */
+    height: 68px; /* Set the height to match the image height */
+}
+
+/* Set play button image by default */
+#toggleButton::before {
+    content: url('images/play-button-68.png');
+}
+
+/* Change the image to stop button when the button is active */
+#toggleButton.active::before {
+    content: url('images/stop-button-68.png');
+}
